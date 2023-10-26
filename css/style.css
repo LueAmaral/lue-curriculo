@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --text-color: #000;
+    --background-color: rgb(255 255 255 / 0.3);
+    --icone-color: #000;
+    --gradiente: #8BA2E0, #E0A496, #80CEE1, #E0BE69, #75E0BB;
+}
+.dark-mode:root{
+    --text-color: #fff;
+    --background-color: rgb(0 0 0 / 0.3);
+    --icone-color: #fff;
+    --filter: invert();
+    --gradiente: #778ABF, #BF8C80, #6DAFBF, #BFA35A, #63BF9F;
+}
+@keyframes degrade-animado{
+    0%{
+        background-position-y: 0%;
+    }
+    100%{
+        background-position-y: 100%;
+    }
+}
+body{
+    background-image: linear-gradient(var(--gradiente));
+    background-size: 100% 1000%;
+    animation: degrade-animado 20s infinite alternate;
+    margin: 0 auto;
+    font-family: 'Poppins';
+}
+nav{
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header, section{
+    margin: 0 auto;
+    max-width: 700px;
+    background-color: var(--background-color);
+    padding: 5%;
+    border-radius: 25px;
+    margin-bottom: 5%;
+    /* margin: 0% 5% 5% 5%; */
+    color: var(--text-color);
+}
+ul{
+    padding: 0px 20px 30px 20px;
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+h3{
+    text-align: center;
+    padding-bottom: 15px;
+}
+h3 + p{
+    text-align: justify;
+    padding-bottom: 30px;
+}
+h3 + img{
+    text-align: center;
+}
+#menu{
+    width: 700px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+#toggletheme{
+    cursor: pointer;
+}
+#foto{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 25px;
+}
+.ladoalado > span, img{
+    margin: 10px;
+}
+.ladoalado > a, p{
+    margin-right: 15px;
+}
+.invert{
+    filter: var(--filter);
+}
+.material-symbols-rounded{
+    color: var(--icone-color);
+}
+.ladoalado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3 + .ladoalado{
+    justify-content: space-between;
+}
+.icone{
+    width: 25px;
+    align-items: center;
+}
+.efeitodelinha{
+    display: inline-block;
+    position: relative;
+}
+.efeitodelinha::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    border-radius: 60px;
+    background-color: #FFFF;
+}
+.efeitodelinha:hover::before{
+    width: 100%;
+    left: 0;
+    height: 2px;
+    right: auto;
+    transition: width 0.4s ease-out;
+}
+.tituloimg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
