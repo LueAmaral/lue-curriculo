@@ -45,11 +45,13 @@ header, section{
     padding: 5%;
     border-radius: 25px;
     margin-bottom: 5%;
-    /* margin: 0% 5% 5% 5%; */
     color: var(--text-color);
 }
+.divisao{
+    margin-bottom: 40px;
+}
 ul{
-    padding: 0px 20px 30px 20px;
+    padding: 0px 20px 0 20px;
 }
 a{
     text-decoration: none;
@@ -57,11 +59,12 @@ a{
 }
 h3{
     text-align: center;
-    padding-bottom: 15px;
+    margin: 0 0 15px 0;
 }
-h3 + p{
+p{
+    text-indent: 50px;
     text-align: justify;
-    padding-bottom: 30px;
+    padding-bottom: 5px;
 }
 h3 + img{
     text-align: center;
@@ -74,18 +77,14 @@ h3 + img{
 }
 #toggletheme{
     cursor: pointer;
+    width: 30px;
+    height: 30px;
 }
 #foto{
     width: 200px;
     height: 200px;
     border-radius: 50%;
     margin: 25px;
-}
-.ladoalado > span, img{
-    margin: 10px;
-}
-.ladoalado > a, p{
-    margin-right: 15px;
 }
 .invert{
     filter: var(--filter);
@@ -98,12 +97,17 @@ h3 + img{
     justify-content: center;
     align-items: center;
 }
+.tituloform{
+    text-align: center;
+    padding-bottom: 15px;
+}
 h3 + .ladoalado{
     justify-content: space-between;
 }
 .icone{
     width: 25px;
     align-items: center;
+    margin-right: 10px;
 }
 .efeitodelinha{
     display: inline-block;
@@ -130,5 +134,39 @@ h3 + .ladoalado{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
+    margin: 15px 0 10px 0;
+}
+.ladoalado div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 15px;
+}
+.compet_hab{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer{
+    margin: 0 auto;
+    max-width: 700px;
+    background-color: var(--background-color);
+    padding: 1em;
+    border-radius: 25px 25px 0 0;
+    color: var(--text-color);
+}
+
+/* media query */
+@media screen and (max-width: 580px) {
+    .ladoalado{
+        flex-direction: column;
+    }
+    .compet_hab{
+        display: block;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 0 0;
+        margin: 0;
+    }
 }

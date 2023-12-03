@@ -7,7 +7,7 @@ toggletheme.onclick = function(){
     if($html.classList.contains("dark-mode")){
         toggletheme.src = "img/light_mode.svg"
     }else{
-        toggletheme.src = "'img/dark_mode.svg"
+        toggletheme.src = "img/dark_mode.svg"
     }
 }
 
